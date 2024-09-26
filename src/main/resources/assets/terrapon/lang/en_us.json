@@ -2,13 +2,25 @@
  "item.terrapon.einvadril_ingot": "Einvadril Ingot",
  "item.terrapon.seidrilium_ingot": "Seiðilium Ingot",
  "item.terrapon.hlifintite_ingot": "Hlífintite Ingot",
+ "item.terrapon.eilifligronium_ingot": "Eilífligronium Ingot",
  "item.terrapon.raw_einvadril": "Raw Einvadril",
  "item.terrapon.raw_hlifintite": "Raw Hlífintite",
  "item.terrapon.raw_seidrilium": "Raw Seiðilium",
+ "item.terrapon.orbofseidril": "Orb of Seidril",
+ "item.terrapon.orbofseidril.no_valuables": "No Important Components Found",
+ "item.terrapon.gobbread": "Gobbread",
+ "item.terrapon.lopt_fuel": "Lopt Fuel",
  "block.terrapon.einvadril_block": "Einvadril Block",
  "block.terrapon.einvadril_ore": "Einvadril Ore",
  "block.terrapon.seidrilium_block": "Seiðilium Block",
  "block.terrapon.seidrilium_ore": "Seiðilium Ore",
  "block.terrapon.hlifintite_block": "Hlífintite Block",
- "block.terrapon.hlifintite_ore": "Hlífintite Ore"
+ "block.terrapon.hlifintite_ore": "Hlífintite Ore",
+ "block.terrapon.eilifligronium_block": "Eilífligronium Block",
+ "block.terrapon.jetsetradio_block": "Sounds of Aetherian Dance",
+ "creativetab.terrapon_tab": "Terrapon Tab",
+
+ "tooltip.terrapon.orbofseidril.tooltip": "Press §4SHIFT§r for more information",
+ "tooltip.terrapon.orbofseidril.tooltip.shift": "Right Click on the block below to find Diamonds and Ancient Debris!",
+ "tooltip.terrapon.jetsetradio_block": "§4Plays the music of the gods, some say you can commune with gods this way..."
 }

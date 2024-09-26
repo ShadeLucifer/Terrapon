@@ -1,0 +1,13 @@
+{
+ "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+     "item": "terrapon:einvadril_block"
+    }
+  ],
+  "result": {
+    "item": "terrapon:einvadril_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "terrapon:einvadril_block",
+    "terrapon:einvadril_ore",
+    "terrapon:hlifintite_block",
+    "terrapon:hlifintite_ore",
+    "terrapon:seidrilium_block",
+    "terrapon:seidrilium_ore",
+    "terrapon:eilifligronium_block"
+  ]
+}

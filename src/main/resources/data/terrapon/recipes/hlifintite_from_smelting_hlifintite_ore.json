@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1200,
+  "experience": 840.0,
+  "group": "hlifintite",
+  "ingredient": {
+    "item": "terrapon:hlifintite_ore"
+  },
+  "result": "terrapon:hlifintite_ingot"
+}

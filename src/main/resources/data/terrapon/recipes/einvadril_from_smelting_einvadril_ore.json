@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 800,
+  "experience": 540.0,
+  "group": "einvadril",
+  "ingredient": {
+    "item": "terrapon:einvadril_ore"
+  },
+  "result": "terrapon:einvadril_ingot"
+}

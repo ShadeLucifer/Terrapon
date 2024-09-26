@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shade.terrapon.block.terraponblock;
 import net.shade.terrapon.item.ModItems;
+import net.shade.terrapon.item.TerraponCreativeModeTabs;
 import org.slf4j.Logger;
 
 import static net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get;
@@ -24,11 +25,11 @@ public class Terrapon {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "terrapon";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public Terrapon() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        TerraponCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         terraponblock.register(modEventBus);
 
@@ -53,6 +54,9 @@ public class Terrapon {
             event.accept(ModItems.SEIDRILIUM_INGOT);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.EILIFLIGRONIUM_INGOT);
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RAW_EINVADRIL);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -69,6 +73,9 @@ public class Terrapon {
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(terraponblock.HLIFINTITE_BLOCK);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(terraponblock.EILIFLIGRONIUM_BLOCK);
         }
 
 

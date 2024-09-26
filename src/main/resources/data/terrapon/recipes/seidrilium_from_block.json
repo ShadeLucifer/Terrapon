@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "terrapon:seidrilium_block"
+    }
+  ],
+  "result": {
+    "item": "terrapon:seidrilium_ingot",
+    "count": 9
+  }
+}

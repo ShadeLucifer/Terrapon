@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "terrapon:hlifintite_ingot"
+    }
+  },
+  "result": {
+    "item": "terrapon:hlifintite_block"
+  }
+
+}
