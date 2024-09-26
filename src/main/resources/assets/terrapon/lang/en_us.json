@@ -1,0 +1,14 @@
+{
+ "item.terrapon.einvadril_ingot": "Einvadril Ingot",
+ "item.terrapon.seidrilium_ingot": "Seiðilium Ingot",
+ "item.terrapon.hlifintite_ingot": "Hlífintite Ingot",
+ "item.terrapon.raw_einvadril": "Raw Einvadril",
+ "item.terrapon.raw_hlifintite": "Raw Hlífintite",
+ "item.terrapon.raw_seidrilium": "Raw Seiðilium",
+ "block.terrapon.einvadril_block": "Einvadril Block",
+ "block.terrapon.einvadril_ore": "Einvadril Ore",
+ "block.terrapon.seidrilium_block": "Seiðilium Block",
+ "block.terrapon.seidrilium_ore": "Seiðilium Ore",
+ "block.terrapon.hlifintite_block": "Hlífintite Block",
+ "block.terrapon.hlifintite_ore": "Hlífintite Ore"
+}
