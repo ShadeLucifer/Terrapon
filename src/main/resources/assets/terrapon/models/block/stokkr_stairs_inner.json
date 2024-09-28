@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "terrapon:block/stokkr_planks",
+    "side": "terrapon:block/stokkr_planks",
+    "top": "terrapon:block/stokkr_planks"
+  }
+}

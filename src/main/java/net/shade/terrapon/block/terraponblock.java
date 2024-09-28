@@ -1,29 +1,22 @@
 package net.shade.terrapon.block;
 
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shade.terrapon.Terrapon;
+import net.shade.terrapon.block.custom.ModFlammableRotatePillarBlock;
 import net.shade.terrapon.block.custom.jetsetradio;
 import net.shade.terrapon.item.ModItems;
 
-import javax.swing.*;
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
@@ -46,16 +39,28 @@ public class terraponblock {
                     .strength(5.0F, 10.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> EINVADRIL_ORE = registerBlock("einvadril_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> HLIFINTITE_ORE = registerBlock("hlifintite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> SEIDRILIUM_ORE = registerBlock("seidrilium_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> JETSETRADIO_BLOCK = registerBlock("jetsetradio_block",
-            () -> new jetsetradio(BlockBehaviour.Properties.copy(IRON_BLOCK)));
-
+            () -> new jetsetradio(BlockBehaviour.Properties.copy(IRON_BLOCK).noLootTable()));
+    public static final RegistryObject<Block> STOKKR_WOOD = registerBlock("stokkr_wood",
+            () -> new ModFlammableRotatePillarBlock(BlockBehaviour.Properties.copy(OAK_LOG)
+                    .strength(7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STOKKR_PLANKS = registerBlock("stokkr_planks",
+            () -> new ModFlammableRotatePillarBlock(BlockBehaviour.Properties.copy(OAK_PLANKS)
+                    .strength(7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STOKKR_STAIRS = registerBlock("stokkr_stairs",
+            () -> new StairBlock(() -> terraponblock.STOKKR_WOOD.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(OAK_STAIRS)
+                    .strength(7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STOKKR_SLAB = registerBlock("stokkr_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(OAK_SLAB)
+                    .strength(7f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -36,6 +36,10 @@ public class TerraponCreativeModeTabs {
                         output.accept(terraponblock.JETSETRADIO_BLOCK.get());
                         output.accept(ModItems.GOBBREAD.get());
                         output.accept(ModItems.LOPT_FUEL.get());
+                        output.accept(terraponblock.STOKKR_WOOD.get());
+                        output.accept(terraponblock.STOKKR_PLANKS.get());
+                        output.accept(terraponblock.STOKKR_SLAB.get());
+                        output.accept(terraponblock.STOKKR_STAIRS.get());
 
                     }).build());
 

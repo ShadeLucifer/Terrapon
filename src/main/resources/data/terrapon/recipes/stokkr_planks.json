@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "terrapon:stokkr_wood"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "terrapon:stokkr_planks"
+  }
+}

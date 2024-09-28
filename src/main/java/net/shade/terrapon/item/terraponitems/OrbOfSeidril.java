@@ -14,13 +14,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.shade.terrapon.util.TerraponTags;
 import org.jetbrains.annotations.Nullable;
-
 import java.util.List;
 
 public class OrbOfSeidril extends Item {
-    public OrbOfSeidril(Properties pProperties) {
-        super(pProperties);
-    }
+    public OrbOfSeidril(Properties pProperties) {super(pProperties);}
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
@@ -60,6 +57,7 @@ public class OrbOfSeidril extends Item {
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.terrapon.orbofseidril.tooltip"));
         }
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
     private void outputNoValuableFound(Player player) {
@@ -72,6 +70,6 @@ public class OrbOfSeidril extends Item {
     }
 
     private boolean isValuableBlock(BlockState blockState) {
-        return blockState.is(TerraponTags.Blocks.ORB_OF_SEIDRIL_VALUABLES);
+        return blockState.is(TerraponTags.Blocks.ORBOFSEIDRIL_VALUABLES);
     }
-    }
+}

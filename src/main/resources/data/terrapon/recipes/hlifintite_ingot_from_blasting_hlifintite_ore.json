@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 150,
+  "experience": 460.0,
+  "group": "hlifintite",
+  "ingredient": {
+    "item": "terrapon:hlifintite_ore"
+  },
+  "result": "terrapon:hlifintite_ingot"
+}

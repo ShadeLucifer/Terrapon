@@ -18,6 +18,10 @@
  "block.terrapon.hlifintite_ore": "Hlífintite Ore",
  "block.terrapon.eilifligronium_block": "Eilífligronium Block",
  "block.terrapon.jetsetradio_block": "Sounds of Aetherian Dance",
+ "block.terrapon.stokkr_wood": "Stokkr Log",
+ "block.terrapon.stokkr_planks": "Stokkr Planks",
+ "block.terrapon.stokkr_stairs": "Stokkr Stairs",
+ "block.terrapon.stokkr_slab": "Stokkr Slab",
  "creativetab.terrapon_tab": "Terrapon Tab",
 
  "tooltip.terrapon.orbofseidril.tooltip": "Press §4SHIFT§r for more information",

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "terrapon:block/stokkr_slab"
+    },
+    "type=double": {
+      "model": "terrapon:block/stokkr_planks"
+    },
+    "type=top": {
+      "model": "terrapon:block/stokkr_slab_top"
+    }
+  }
+}

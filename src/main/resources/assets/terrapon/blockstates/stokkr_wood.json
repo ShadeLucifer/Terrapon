@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "terrapon:block/stokkr_wood_top",
+      "x": 90
+    },
+    "axis=y": {
+      "model": "terrapon:block/stokkr_wood",
+      "y": 90
+    },
+    "axis=z": {
+      "model": "terrapon:block/stokkr_wood_top",
+      "x": 90
+    }
+  }
+}

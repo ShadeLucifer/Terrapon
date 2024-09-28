@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 160.0,
+  "group": "stokkr",
+  "ingredient": {
+    "item": "terrapon:stokkr_wood"
+  },
+  "result": "terrapon:lopt_fuel"
+}

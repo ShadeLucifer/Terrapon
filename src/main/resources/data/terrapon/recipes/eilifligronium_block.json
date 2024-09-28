@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "EEE",
-    "EEE",
-    "EEE"
-  ],
   "key": {
     "E": {
       "item": "terrapon:eilifligronium_ingot"
     }
   },
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
   "result": {
     "item": "terrapon:eilifligronium_block"
-  }
-
+  },
+  "show_notification": true
 }

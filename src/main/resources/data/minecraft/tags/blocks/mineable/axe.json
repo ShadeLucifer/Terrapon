@@ -1,7 +1,10 @@
 {
  "replace": false,
   "values": [
-
+    "terrapon:stokkr_wood",
+    "terrapon:stokkr_planks",
+    "terrapon:stokkr_slab",
+    "terrapon:stokkr_stairs"
   ]
 
 }

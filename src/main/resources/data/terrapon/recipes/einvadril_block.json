@@ -1,18 +1,18 @@
 {
- "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
-  ],
   "key": {
     "A": {
       "item": "terrapon:einvadril_ingot"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
   "result": {
     "item": "terrapon:einvadril_block"
-  }
-
+  },
+  "show_notification": true
 }

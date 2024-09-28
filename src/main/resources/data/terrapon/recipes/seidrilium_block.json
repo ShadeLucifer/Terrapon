@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "SSS",
-    "SSS",
-    "SSS"
-  ],
   "key": {
     "S": {
       "item": "terrapon:seidrilium_ingot"
     }
   },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
   "result": {
     "item": "terrapon:seidrilium_block"
-  }
-
+  },
+  "show_notification": true
 }

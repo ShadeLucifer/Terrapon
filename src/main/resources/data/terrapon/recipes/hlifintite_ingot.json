@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "terrapon:hlifintite_block"
+    }
+  ],
+  "result": {
+    "item": "terrapon:hlifintite_ingot"
+  }
+}

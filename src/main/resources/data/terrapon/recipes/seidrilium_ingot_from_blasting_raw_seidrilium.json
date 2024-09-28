@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 50,
+  "experience": 340.0,
+  "group": "seidrilium",
+  "ingredient": {
+    "item": "terrapon:raw_seidrilium"
+  },
+  "result": "terrapon:seidrilium_ingot"
+}
