@@ -34,6 +34,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createOreDrop(terraponblock.HLIFINTITE_ORE.get(), ModItems.RAW_HLIFINTITE.get()));
         this.add(terraponblock.STOKKR_SLAB.get(),
              block -> createSlabItemTable(terraponblock.STOKKR_SLAB.get()));
+        this.dropSelf(terraponblock.STOKKR_BUTTON.get());
+        this.dropSelf(terraponblock.STOKKR_PRESSURE_PLATE.get());
+        this.dropSelf(terraponblock.EILIFLIGRONIUM_WALL.get());
+        this.dropSelf(terraponblock.STOKKR_FENCE.get());
+        this.dropSelf(terraponblock.STOKKR_FENCE_GATE.get());
+        this.dropSelf(terraponblock.STOKKR_TRAPDOOR.get());
+
+        this.add(terraponblock.STOKKR_DOOR.get(),
+              block -> createDoorTable(terraponblock.STOKKR_DOOR.get()));
 
     }
 

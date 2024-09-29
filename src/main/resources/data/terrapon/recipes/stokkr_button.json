@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "terrapon:stokkr_planks"
+    }
+  ],
+  "result": {
+    "item": "terrapon:stokkr_button"
+  }
+}

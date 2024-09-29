@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "terrapon:stokkr_planks"
+    }
+  },
+  "pattern": [
+    "HHH",
+    "HHH"
+  ],
+  "result": {
+    "item": "terrapon:stokkr_trapdoor"
+  },
+  "show_notification": true
+}

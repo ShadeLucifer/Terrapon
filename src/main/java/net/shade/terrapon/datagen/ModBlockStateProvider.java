@@ -1,9 +1,7 @@
 package net.shade.terrapon.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -29,9 +27,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(terraponblock.STOKKR_WOOD);
         stairsBlock((StairBlock) terraponblock.STOKKR_STAIRS.get(), blockTexture(terraponblock.STOKKR_PLANKS.get()));
         slabBlock(((SlabBlock) terraponblock.STOKKR_SLAB.get()), blockTexture(terraponblock.STOKKR_PLANKS.get()), blockTexture(terraponblock.STOKKR_PLANKS.get()));
+
+
+
     }
+
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+
+
+    }
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+
+
     }
 }

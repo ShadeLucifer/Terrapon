@@ -1,10 +1,14 @@
 {
- "replace": false,
   "values": [
     "terrapon:stokkr_wood",
     "terrapon:stokkr_planks",
     "terrapon:stokkr_slab",
-    "terrapon:stokkr_stairs"
+    "terrapon:stokkr_stairs",
+    "terrapon:stokkr_fence",
+    "terrapon:stokkr_pressure_plate",
+    "terrapon:stokkr_button",
+    "terrapon:stokkr_fence_gate",
+    "terrapon:stokkr_door",
+    "terrapon:stokkr_trapdoor"
   ]
-
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stokkr_button": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "terrapon:stokkr_button"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "terrapon:stokkr_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stokkr_button",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "terrapon:stokkr_button"
+    ]
+  },
+  "sends_telemetry_event": false
+}

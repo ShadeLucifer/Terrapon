@@ -49,7 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HLIFINTITE_INGOT.get())
                 .requires(terraponblock.HLIFINTITE_BLOCK.get())
-                .unlockedBy("has_hlifintite_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.EINVADRIL_BLOCK.get()).build()))
+                .unlockedBy("has_hlifintite_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.HLIFINTITE_BLOCK.get()).build()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, terraponblock.EILIFLIGRONIUM_BLOCK.get())
                 .pattern("EEE")
@@ -61,7 +61,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EILIFLIGRONIUM_INGOT.get())
                 .requires(terraponblock.EILIFLIGRONIUM_BLOCK.get())
-                .unlockedBy("has_eilifligronium_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.EINVADRIL_BLOCK.get()).build()))
+                .unlockedBy("has_eilifligronium_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.EILIFLIGRONIUM_BLOCK.get()).build()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, terraponblock.SEIDRILIUM_BLOCK.get())
                 .pattern("SSS")
@@ -73,7 +73,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SEIDRILIUM_INGOT.get())
                 .requires(terraponblock.SEIDRILIUM_BLOCK.get())
-                .unlockedBy("has_eilifligronium_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.EINVADRIL_BLOCK.get()).build()))
+                .unlockedBy("has_eilifligronium_block", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.SEIDRILIUM_BLOCK.get()).build()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, terraponblock.STOKKR_BUTTON.get())
+                .requires(terraponblock.STOKKR_PLANKS.get())
+                .unlockedBy("has_stokkr_button", inventoryTrigger(ItemPredicate.Builder.item().of(terraponblock.STOKKR_BUTTON.get()).build()))
                 .save(pWriter);
 
         oreSmelting(pWriter, EINVADRIL_SMELTABLES, RecipeCategory.MISC, ModItems.EINVADRIL_INGOT.get(), 220.0f, 900, "einvadril");

@@ -11,6 +11,11 @@ import net.shade.terrapon.Terrapon;
 public class TerraponTags {
     public static class Blocks {
         public static final TagKey<Block> ORBOFSEIDRIL_VALUABLES = tag("orbofseidril_valuables");
+        public static final TagKey<Block> NEEDS_SEIDRILIUM_TOOL = tag("needs_seidrilium_tool");
+        public static final TagKey<Block> NEEDS_EINVADRIL_TOOL = tag("needs_einvadril_tool");
+        public static final TagKey<Block> NEEDS_HLIFINTITE_TOOL = tag("needs_hlifintite_tool");
+        public static final TagKey<Block> NEEDS_EILIFLIGRONIUM_TOOL = tag("needs_eilifligronium_tool");
+        public static final TagKey<Block> EILIFLIGPAXEL_MINEABLE = tag("mineable/eilifligpaxel");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Terrapon.MOD_ID, name));

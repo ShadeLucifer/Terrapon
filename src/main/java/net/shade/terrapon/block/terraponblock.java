@@ -1,10 +1,12 @@
 package net.shade.terrapon.block;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,12 +57,34 @@ public class terraponblock {
             () -> new ModFlammableRotatePillarBlock(BlockBehaviour.Properties.copy(OAK_PLANKS)
                     .strength(7f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STOKKR_STAIRS = registerBlock("stokkr_stairs",
-            () -> new StairBlock(() -> terraponblock.STOKKR_WOOD.get().defaultBlockState(),
+            () -> new StairBlock(() -> terraponblock.STOKKR_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(OAK_STAIRS)
                     .strength(7f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STOKKR_SLAB = registerBlock("stokkr_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(OAK_SLAB)
                     .strength(7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STOKKR_PRESSURE_PLATE = registerBlock("stokkr_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(WARPED_PRESSURE_PLATE).strength(7f).requiresCorrectToolForDrops(), BlockSetType.WARPED));
+    public static final RegistryObject<Block> STOKKR_BUTTON = registerBlock("stokkr_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(WARPED_BUTTON).strength(7f).requiresCorrectToolForDrops(),
+                    BlockSetType.WARPED,10, true));
+    public static final RegistryObject<Block> STOKKR_FENCE = registerBlock("stokkr_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(WARPED_FENCE).strength(7f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STOKKR_FENCE_GATE = registerBlock("stokkr_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(WARPED_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> STOKKR_DOOR = registerBlock("stokkr_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(WARPED_DOOR), BlockSetType.WARPED));
+    public static final RegistryObject<Block> STOKKR_TRAPDOOR = registerBlock("stokkr_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(WARPED_TRAPDOOR), BlockSetType.WARPED));
+
+
+    public static final RegistryObject<Block> EILIFLIGRONIUM_WALL = registerBlock("eilifligronium_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(IRON_BLOCK).strength(7f).requiresCorrectToolForDrops()));
+
+
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

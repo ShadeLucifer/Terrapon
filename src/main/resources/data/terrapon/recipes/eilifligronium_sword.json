@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "terrapon:stokkr_stick"
+    },
+    "X": {
+      "item": "terrapon:eilifligronium_ingot"
+    }
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "item": "terrapon:eilifligronium_sword"
+  },
+  "show_notification": true
+}

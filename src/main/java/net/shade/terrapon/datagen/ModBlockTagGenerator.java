@@ -31,28 +31,61 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 terraponblock.SEIDRILIUM_BLOCK.get(),
                 terraponblock.EILIFLIGRONIUM_BLOCK.get(),
                 terraponblock.EINVADRIL_BLOCK.get(),
-                terraponblock.HLIFINTITE_BLOCK.get());
+                terraponblock.HLIFINTITE_BLOCK.get(),
+                terraponblock.EILIFLIGRONIUM_WALL.get());
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                 .add(terraponblock.EINVADRIL_ORE.get(),
-                 terraponblock.HLIFINTITE_ORE.get(),
-                 terraponblock.SEIDRILIUM_ORE.get(),
-                 terraponblock.SEIDRILIUM_BLOCK.get(),
-                 terraponblock.EILIFLIGRONIUM_BLOCK.get(),
-                 terraponblock.EINVADRIL_BLOCK.get(),
-                 terraponblock.HLIFINTITE_BLOCK.get(),
-                 terraponblock.STOKKR_PLANKS.get(),
-                 terraponblock.STOKKR_WOOD.get(),
-                 terraponblock.STOKKR_SLAB.get(),
-                 terraponblock.STOKKR_STAIRS.get());
+                .add(terraponblock.SEIDRILIUM_ORE.get(),
+                 terraponblock.SEIDRILIUM_BLOCK.get());
+
+        this.tag(TerraponTags.Blocks.NEEDS_SEIDRILIUM_TOOL)
+                 .add(terraponblock.EINVADRIL_ORE.get());
+
+        this.tag(TerraponTags.Blocks.NEEDS_EINVADRIL_TOOL)
+                .add(terraponblock.HLIFINTITE_ORE.get());
+
+        this.tag(TerraponTags.Blocks.NEEDS_HLIFINTITE_TOOL)
+                .add(terraponblock.STOKKR_WOOD.get(),
+                        terraponblock.STOKKR_PLANKS.get(),
+                        terraponblock.STOKKR_SLAB.get(),
+                        terraponblock.STOKKR_STAIRS.get(),
+                        terraponblock.STOKKR_FENCE.get(),
+                        terraponblock.STOKKR_PRESSURE_PLATE.get(),
+                        terraponblock.STOKKR_BUTTON.get(),
+                        terraponblock.STOKKR_FENCE_GATE.get(),
+                        terraponblock.STOKKR_TRAPDOOR.get(),
+                        terraponblock.STOKKR_DOOR.get());
+        this.tag(TerraponTags.Blocks.EILIFLIGPAXEL_MINEABLE)
+                .addTags(BlockTags.MINEABLE_WITH_AXE, BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.MINEABLE_WITH_SHOVEL, BlockTags.MINEABLE_WITH_HOE);
+
+        this.tag(TerraponTags.Blocks.NEEDS_EILIFLIGRONIUM_TOOL)
+                .add(terraponblock.EILIFLIGRONIUM_WALL.get(),
+                terraponblock.EILIFLIGRONIUM_WALL.get());
+
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(terraponblock.STOKKR_WOOD.get(),
                 terraponblock.STOKKR_PLANKS.get(),
                 terraponblock.STOKKR_SLAB.get(),
-                terraponblock.STOKKR_STAIRS.get());
+                terraponblock.STOKKR_STAIRS.get(),
+                terraponblock.STOKKR_FENCE.get(),
+                terraponblock.STOKKR_PRESSURE_PLATE.get(),
+                terraponblock.STOKKR_BUTTON.get(),
+                terraponblock.STOKKR_FENCE_GATE.get(),
+                terraponblock.STOKKR_TRAPDOOR.get(),
+                terraponblock.STOKKR_DOOR.get());
+
         this.tag(BlockTags.STAIRS)
                 .add(terraponblock.STOKKR_STAIRS.get());
         this.tag(BlockTags.SLABS)
                 .add(terraponblock.STOKKR_SLAB.get());
+
+
+
+        this.tag(BlockTags.FENCES)
+                .add(terraponblock.STOKKR_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(terraponblock.STOKKR_FENCE_GATE.get());
+        this.tag(BlockTags.WALLS)
+                .add(terraponblock.EILIFLIGRONIUM_WALL.get());
     }
 
     @Override

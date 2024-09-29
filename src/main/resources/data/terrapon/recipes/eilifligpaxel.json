@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "terrapon:stokkr_stick"
+    },
+    "X": {
+      "item": "terrapon:eilifligronium_pickaxe"
+    },
+    "W": {
+      "item": "terrapon:eilifligronium_axe"
+    },
+    "Y": {
+      "item": "terrapon:eilifligronium_shovel"
+    },
+    "Z": {
+      "item": "terrapon:eilifligronium_hoe"
+    }
+  },
+  "pattern": [
+    "XYZ",
+    "W# ",
+    " # "
+  ],
+  "result": {
+    "item": "terrapon:eilifligronium_pickaxe"
+  },
+  "show_notification": true
+}
