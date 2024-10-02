@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "terrapon:block/eilifligrlamp_off"
+    },
+    "clicked=true": {
+      "model": "terrapon:block/eilifligrlamp_on"
+    }
+  }
+}

@@ -13,6 +13,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shade.terrapon.block.terraponblock;
+import net.shade.terrapon.enchantment.TerraponEnchantment;
+import net.shade.terrapon.item.ModItemProperties;
 import net.shade.terrapon.item.ModItems;
 import net.shade.terrapon.item.TerraponCreativeModeTabs;
 import org.slf4j.Logger;
@@ -32,7 +34,7 @@ public class Terrapon {
         TerraponCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         terraponblock.register(modEventBus);
-
+        TerraponEnchantment.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -96,7 +98,10 @@ public class Terrapon {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
 
+            });
         }
     }
 }

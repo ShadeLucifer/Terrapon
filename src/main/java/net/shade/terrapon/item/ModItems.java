@@ -35,7 +35,7 @@ public class ModItems {
             () -> new LoptFuel(new Item.Properties(), 128000));
 
     public static final RegistryObject<Item> SEIDRILIUM_SWORD = ITEMS.register("seidrilium_sword",
-            () -> new SwordItem(TerraponToolTiers.SEIDRILIUM_INGOT, 3, 16, new Item.Properties().durability(3425)));
+            () -> new SlowingSwordItem(TerraponToolTiers.SEIDRILIUM_INGOT, 3, 16, new Item.Properties().durability(3425)));
     public static final RegistryObject<Item> SEIDRILIUM_AXE = ITEMS.register("seidrilium_axe",
             () -> new AxeItem(TerraponToolTiers.SEIDRILIUM_INGOT, 8, 16, new Item.Properties().durability(3425)));
     public static final RegistryObject<Item> SEIDRILIUM_SHOVEL = ITEMS.register("seidrilium_shovel",
@@ -78,7 +78,40 @@ public class ModItems {
             () -> new PaxelItem(TerraponToolTiers.EILIFLIGRONIUM_INGOT, 18, 20, new Item.Properties().durability(999999999)));
     public static final RegistryObject<Item> EILIFLIGRONIUM_SLEDGE = ITEMS.register("eilifligronium_sledge",
             () -> new HammerItem(TerraponToolTiers.EILIFLIGRONIUM_INGOT, 18, 20, new Item.Properties().durability(999999999)));
-
+    public static final RegistryObject<Item> SEIDRILIUM_HELMET = ITEMS.register("seidrilium_helmet",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.SEIDRILIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SEIDRILIUM_CHESTPLATE = ITEMS.register("seidrilium_chestplate",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.SEIDRILIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SEIDRILIUM_LEGGINGS = ITEMS.register("seidrilium_leggings",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.SEIDRILIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SEIDRILIUM_BOOTS = ITEMS.register("seidrilium_boots",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.SEIDRILIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> EINVADRIL_HELMET = ITEMS.register("einvadril_helmet",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.EINVADRIL, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EINVADRIL_CHESTPLATE = ITEMS.register("einvadril_chestplate",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.EINVADRIL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> EINVADRIL_LEGGINGS = ITEMS.register("einvadril_leggings",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.EINVADRIL, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> EINVADRIL_BOOTS = ITEMS.register("einvadril_boots",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.EINVADRIL, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> HLIFINTITE_HELMET = ITEMS.register("hlifintite_helmet",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.HLIFINTITE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> HLIFINTITE_CHESTPLATE = ITEMS.register("hlifintite_chestplate",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.HLIFINTITE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> HLIFINTITE_LEGGINGS = ITEMS.register("hlifintite_leggings",
+            () -> new TerraponArmorItem(TerraponArmorMaterials.HLIFINTITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> HLIFINTITE_BOOTS = ITEMS.register("hlifintite_boots",
+            () -> new EilifligroniumArmor(TerraponArmorMaterials.HLIFINTITE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> EILIFLIGRONIUM_HELMET = ITEMS.register("eilifligronium_helmet",
+            () -> new EilifligroniumArmor(TerraponArmorMaterials.EILIFLIGRONIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EILIFLIGRONIUM_CHESTPLATE = ITEMS.register("eilifligronium_chestplate",
+            () -> new EilifligroniumArmor(TerraponArmorMaterials.EILIFLIGRONIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> EILIFLIGRONIUM_LEGGINGS = ITEMS.register("eilifligronium_leggings",
+            () -> new EilifligroniumArmor(TerraponArmorMaterials.EILIFLIGRONIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> EILIFLIGRONIUM_BOOTS = ITEMS.register("eilifligronium_boots",
+            () -> new EilifligroniumArmor(TerraponArmorMaterials.EILIFLIGRONIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> SEIDRILSCROLL = ITEMS.register("seidrilscroll",
+            () -> new SeidrilScroll(new Item.Properties().stacksTo(1)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

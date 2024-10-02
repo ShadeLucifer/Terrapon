@@ -2,6 +2,7 @@ package net.shade.terrapon.item.terraponitems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -12,12 +13,16 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.shade.terrapon.item.ModItems;
+import net.shade.terrapon.util.InventoryUtil;
 import net.shade.terrapon.util.TerraponTags;
 import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class OrbOfSeidril extends Item {
     public OrbOfSeidril(Properties pProperties) {super(pProperties);}
+
+    
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
@@ -32,6 +37,10 @@ public class OrbOfSeidril extends Item {
                 if(isValuableBlock(blockState)) {
                     outputValuableCoordinates(positionClicked.below(i), player, blockState.getBlock());
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.SEIDRILSCROLL.get())) {
+                        addInfoToSeidrilScroll(player, positionClicked.below(i), blockState.getBlock());
+                    }
 
                     break;
                 }
@@ -48,6 +57,16 @@ public class OrbOfSeidril extends Item {
         return InteractionResult.SUCCESS;
 
 
+    }
+
+    private void addInfoToSeidrilScroll(Player player, BlockPos below, Block block) {
+        ItemStack seidrilScroll = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.SEIDRILSCROLL.get()));
+
+        CompoundTag info = new CompoundTag();
+        info.putString("terrapon.found_ore","Important Component Found: " + I18n.get(block.getDescriptionId())
+                + " at (" + below.getX() + ", " + below.getY() + ", " + below.getZ() + ")");
+
+        seidrilScroll.setTag(info);
     }
 
     @Override

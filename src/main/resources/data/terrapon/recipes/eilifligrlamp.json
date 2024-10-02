@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "terrapon:eilifligronium_ingot"
+    },
+    "Z": {
+      "item": "terrapon:seidrilium_block"
+    }
+  },
+  "pattern": [
+    " H ",
+    "HZH",
+    " H "
+  ],
+  "result": {
+    "item": "terrapon:eilifligrlamp"
+  },
+  "show_notification": true
+}

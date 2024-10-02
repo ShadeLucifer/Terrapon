@@ -40,6 +40,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(terraponblock.STOKKR_FENCE.get());
         this.dropSelf(terraponblock.STOKKR_FENCE_GATE.get());
         this.dropSelf(terraponblock.STOKKR_TRAPDOOR.get());
+        this.dropSelf(terraponblock.EILIFLIGRLAMP.get());
 
         this.add(terraponblock.STOKKR_DOOR.get(),
               block -> createDoorTable(terraponblock.STOKKR_DOOR.get()));

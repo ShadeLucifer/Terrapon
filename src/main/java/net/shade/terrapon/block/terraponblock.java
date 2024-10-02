@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shade.terrapon.Terrapon;
+import net.shade.terrapon.block.custom.EilifligroniumLampBlock;
 import net.shade.terrapon.block.custom.ModFlammableRotatePillarBlock;
 import net.shade.terrapon.block.custom.jetsetradio;
 import net.shade.terrapon.item.ModItems;
@@ -28,17 +29,18 @@ public class terraponblock {
 
 
     public static final RegistryObject<Block> SEIDRILIUM_BLOCK = registerBlock("seidrilium_block",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
-                    .strength(5.0F, 10.0F).sound(SoundType.METAL)));
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).strength(5.0F)
+                    .sound(SoundType.METAL).lightLevel((p_187431_) -> {
+                return 15;})));
     public static final RegistryObject<Block> HLIFINTITE_BLOCK = registerBlock("hlifintite_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BELL).requiresCorrectToolForDrops()
-                    .strength(5.0F, 10.0F).sound(SoundType.METAL)));
+                    .strength(8.0F, 10.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> EINVADRIL_BLOCK = registerBlock("einvadril_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BANJO).requiresCorrectToolForDrops()
-                    .strength(5.0F, 10.0F).sound(SoundType.METAL)));
+                    .strength(6.0F, 10.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> EILIFLIGRONIUM_BLOCK = registerBlock("eilifligronium_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BANJO).requiresCorrectToolForDrops()
-                    .strength(5.0F, 10.0F).sound(SoundType.METAL)));
+                    .strength(12.0F, 10.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> EINVADRIL_ORE = registerBlock("einvadril_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
                     .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
@@ -77,8 +79,9 @@ public class terraponblock {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(WARPED_DOOR), BlockSetType.WARPED));
     public static final RegistryObject<Block> STOKKR_TRAPDOOR = registerBlock("stokkr_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(WARPED_TRAPDOOR), BlockSetType.WARPED));
-
-
+    public static final RegistryObject<Block> EILIFLIGRLAMP = registerBlock("eilifligrlamp",
+            () -> new EilifligroniumLampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).sound(SoundType.AMETHYST)
+                    .lightLevel(state -> state.getValue(EilifligroniumLampBlock.CLICKED) ? 15 : 0)));
     public static final RegistryObject<Block> EILIFLIGRONIUM_WALL = registerBlock("eilifligronium_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(IRON_BLOCK).strength(7f).requiresCorrectToolForDrops()));
 

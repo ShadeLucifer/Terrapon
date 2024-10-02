@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "terrapon:seidrilium_ingot"
+    },
+    "O": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "##O"
+  ],
+  "result": {
+    "count": 1,
+    "item": "terrapon:seidrilscroll"
+  },
+  "show_notification": true
+}

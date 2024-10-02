@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "terrapon:item/seidrilscroll_off"
+  },
+  "overrides": [
+    {
+     "predicate": {
+       "terrapon:on": 1
+     },
+      "model": "terrapon:item/seidrilscroll_on"
+    }
+  ]
+}

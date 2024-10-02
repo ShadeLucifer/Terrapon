@@ -22,6 +22,10 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.RAW_SEIDRILIUM.get());
                         output.accept(terraponblock.SEIDRILIUM_BLOCK.get());
                         output.accept(terraponblock.SEIDRILIUM_ORE.get());
+                        output.accept(ModItems.SEIDRILIUM_HELMET.get());
+                        output.accept(ModItems.SEIDRILIUM_CHESTPLATE.get());
+                        output.accept(ModItems.SEIDRILIUM_LEGGINGS.get());
+                        output.accept(ModItems.SEIDRILIUM_BOOTS.get());
                         output.accept(ModItems.SEIDRILIUM_SWORD.get());
                         output.accept(ModItems.SEIDRILIUM_AXE.get());
                         output.accept(ModItems.SEIDRILIUM_PICKAXE.get());
@@ -36,6 +40,10 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.EINVADRIL_SHOVEL.get());
                         output.accept(ModItems.EINVADRIL_PICKAXE.get());
                         output.accept(ModItems.EINVADRIL_HOE.get());
+                        output.accept(ModItems.EINVADRIL_HELMET.get());
+                        output.accept(ModItems.EINVADRIL_CHESTPLATE.get());
+                        output.accept(ModItems.EINVADRIL_LEGGINGS.get());
+                        output.accept(ModItems.EINVADRIL_BOOTS.get());
                         output.accept(ModItems.HLIFINTITE_INGOT.get());
                         output.accept(ModItems.RAW_HLIFINTITE.get());
                         output.accept(terraponblock.HLIFINTITE_BLOCK.get());
@@ -45,8 +53,13 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.HLIFINTITE_SHOVEL.get());
                         output.accept(ModItems.HLIFINTITE_PICKAXE.get());
                         output.accept(ModItems.HLIFINTITE_HOE.get());
+                        output.accept(ModItems.HLIFINTITE_HELMET.get());
+                        output.accept(ModItems.HLIFINTITE_CHESTPLATE.get());
+                        output.accept(ModItems.HLIFINTITE_LEGGINGS.get());
+                        output.accept(ModItems.HLIFINTITE_BOOTS.get());
                         output.accept(ModItems.EILIFLIGRONIUM_INGOT.get());
                         output.accept(terraponblock.EILIFLIGRONIUM_BLOCK.get());
+                        output.accept(terraponblock.EILIFLIGRLAMP.get());
                         output.accept(terraponblock.EILIFLIGRONIUM_WALL.get());
                         output.accept(ModItems.EILIFLIGRONIUM_SWORD.get());
                         output.accept(ModItems.EILIFLIGRONIUM_AXE.get());
@@ -55,7 +68,12 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.EILIFLIGRONIUM_HOE.get());
                         output.accept(ModItems.EILIFLIGPAXEL.get());
                         output.accept(ModItems.EILIFLIGRONIUM_SLEDGE.get());
+                        output.accept(ModItems.EILIFLIGRONIUM_HELMET.get());
+                        output.accept(ModItems.EILIFLIGRONIUM_CHESTPLATE.get());
+                        output.accept(ModItems.EILIFLIGRONIUM_LEGGINGS.get());
+                        output.accept(ModItems.EILIFLIGRONIUM_BOOTS.get());
                         output.accept(ModItems.ORBOFSEIDRIL.get());
+                        output.accept(ModItems.SEIDRILSCROLL.get());
                         output.accept(terraponblock.JETSETRADIO_BLOCK.get());
                         output.accept(ModItems.GOBBREAD.get());
                         output.accept(ModItems.LOPT_FUEL.get());

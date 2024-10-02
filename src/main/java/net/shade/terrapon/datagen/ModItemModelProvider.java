@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     handheldItem(ModItems.EILIFLIGRONIUM_HOE);
     handheldItem(ModItems.EILIFLIGPAXEL);
     handheldItem(ModItems.EILIFLIGRONIUM_SLEDGE);
+    simpleItem(ModItems.SEIDRILSCROLL);
 
     }
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
