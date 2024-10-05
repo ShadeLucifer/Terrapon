@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 20.0,
+  "group": "gobbread",
+  "ingredient": {
+    "item": "terrapon:vionea_bushel"
+  },
+  "result": "terrapon:gobbread"
+}

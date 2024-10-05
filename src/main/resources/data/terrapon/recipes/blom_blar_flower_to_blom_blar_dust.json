@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "terrapon:blom_blar"
+    }
+  ],
+  "result": {
+    "item": "terrapon:blom_blar_dust"
+  }
+}

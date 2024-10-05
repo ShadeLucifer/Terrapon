@@ -8,6 +8,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.shade.terrapon.effect.TerraponEffects;
 import net.shade.terrapon.item.TerraponArmorMaterials;
 
 import java.util.Map;
@@ -15,8 +16,6 @@ import java.util.Map;
 public class TerraponArmorItem  extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(TerraponArmorMaterials.SEIDRILIUM, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2, 0))
-                    .put(TerraponArmorMaterials.EINVADRIL, new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2, 2))
                     .put(TerraponArmorMaterials.HLIFINTITE, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2, 2))
                     .build();
 

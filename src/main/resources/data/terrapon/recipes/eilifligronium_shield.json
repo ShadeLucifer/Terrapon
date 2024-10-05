@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "terrapon:eilifligronium_ingot"
+    },
+    "Z": {
+      "item": "terrapon:stokkr_planks"
+    }
+  },
+  "pattern": [
+    "HZH",
+    "ZZZ",
+    " H "
+  ],
+  "result": {
+    "item": "terrapon:eilifligronium_shield"
+  },
+  "show_notification": true
+}

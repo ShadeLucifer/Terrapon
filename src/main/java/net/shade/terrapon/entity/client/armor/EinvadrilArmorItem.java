@@ -1,29 +1,38 @@
-package net.shade.terrapon.item.terraponitems;
+package net.shade.terrapon.entity.client.armor;
 
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.shade.terrapon.item.TerraponArmorMaterials;
+import org.jetbrains.annotations.NotNull;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
 
 import java.util.Map;
+import java.util.function.Consumer;
 
-public class EilifligroniumArmor  extends ArmorItem {
+public class EinvadrilArmorItem extends ArmorItem implements GeoItem{
+    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(TerraponArmorMaterials.EILIFLIGRONIUM, new MobEffectInstance(MobEffects.REGENERATION, 10, 10))
+                    .put(TerraponArmorMaterials.EINVADRIL, new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2, 2))
                     .build();
 
-    public EilifligroniumArmor(ArmorMaterial material, Type type, Properties properties) {
+    public EinvadrilArmorItem(ArmorMaterial material, Type type, Properties properties) {
         super(material, type, properties);
     }
-
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         if(!level.isClientSide() && hasFullSuitOfArmorOn(player)) {
@@ -74,25 +83,37 @@ public class EilifligroniumArmor  extends ArmorItem {
         ItemStack helmet = player.getInventory().getArmor(3);
         return !boots.isEmpty() && !leggings.isEmpty() && !chestplate.isEmpty() && !helmet.isEmpty();
     }
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        if (pEntity instanceof Player player) {
-            ItemStack boots = player.getItemBySlot(EquipmentSlot.FEET);
-            ItemStack leggings = player.getItemBySlot(EquipmentSlot.LEGS);
-            ItemStack chestplate = player.getItemBySlot(EquipmentSlot.CHEST);
-            ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
+    @Override
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
+            private EinvadrilArmorRenderer renderer;
 
-            // Check if the player already has flight enabled through another means
-            if (player.getAbilities().mayfly) return;
+            @Override
+            public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
+                                                                   EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
+                if (this.renderer == null)
+                    this.renderer = new EinvadrilArmorRenderer();
 
-            if (player.isCreative() || player.isSpectator()) return;
+                this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
+                return this.renderer;
 
-            if (boots.getItem() instanceof EilifligroniumArmor && leggings.getItem() instanceof EilifligroniumArmor && chestplate.getItem()
-                    instanceof EilifligroniumArmor && helmet.getItem() instanceof EilifligroniumArmor) {
-                player.getAbilities().mayfly = true;
-                player.fallDistance = 0.0f;
-            } else {
-                player.getAbilities().mayfly = false; // Turn off flight
             }
-        }
+        });
+    }
+
+
+    private PlayState predicate(AnimationState animationState) {
+        animationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        return PlayState.CONTINUE;
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+        controllerRegistrar.add(new AnimationController(this, "controller", 0, this::predicate));
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
     }
 }

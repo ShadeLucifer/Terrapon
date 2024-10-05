@@ -18,10 +18,16 @@ public class TerraponToolTiers {
     public static Tier EINVADRIL_INGOT = TierSortingRegistry.registerTier(new ForgeTier(7, 4425, 8f, 12f, 26,
                     TerraponTags.Blocks.NEEDS_SEIDRILIUM_TOOL, () -> Ingredient.of(ModItems.EINVADRIL_INGOT.get())),
             new ResourceLocation(Terrapon.MOD_ID, "einvadril"), List.of(Tiers.NETHERITE), List.of());
-    public static Tier HLIFINTITE_INGOT = TierSortingRegistry.registerTier(new ForgeTier(8, 12425, 6f, 4f, 30,
+    public static Tier THORNECKITE_INGOT = TierSortingRegistry.registerTier(new ForgeTier(8, 8425, 4f, 8f, 30,
+                    TerraponTags.Blocks.NEEDS_EINVADRIL_TOOL, () -> Ingredient.of(ModItems.THORNECKITE_INGOT.get())),
+            new ResourceLocation(Terrapon.MOD_ID, "thorneckite"), List.of(Tiers.NETHERITE), List.of());
+    public static Tier SOLLOGIUM_INGOT = TierSortingRegistry.registerTier(new ForgeTier(8, 6525, 8f, 6f, 30,
+                    TerraponTags.Blocks.NEEDS_THORNECKITE_TOOL, () -> Ingredient.of(ModItems.SOLLOGIUM_INGOT.get())),
+            new ResourceLocation(Terrapon.MOD_ID, "thorneckite"), List.of(Tiers.NETHERITE), List.of());
+    public static Tier HLIFINTITE_INGOT = TierSortingRegistry.registerTier(new ForgeTier(12, 12425, 6f, 4f, 30,
                     TerraponTags.Blocks.NEEDS_EINVADRIL_TOOL, () -> Ingredient.of(ModItems.HLIFINTITE_INGOT.get())),
             new ResourceLocation(Terrapon.MOD_ID, "hlifintite"), List.of(Tiers.NETHERITE), List.of());
-    public static Tier EILIFLIGRONIUM_INGOT = TierSortingRegistry.registerTier(new ForgeTier(10, 999999999, 20f, 20f, 100,
-                    TerraponTags.Blocks.NEEDS_EINVADRIL_TOOL, () -> Ingredient.of(ModItems.EILIFLIGRONIUM_INGOT.get())),
+    public static Tier EILIFLIGRONIUM_INGOT = TierSortingRegistry.registerTier(new ForgeTier(20, -1, 20f, 20f, 100,
+                    TerraponTags.Blocks.NEEDS_EILIFLIGRONIUM_TOOL, () -> Ingredient.of(ModItems.EILIFLIGRONIUM_INGOT.get())),
             new ResourceLocation(Terrapon.MOD_ID, "eilifligronium"), List.of(Tiers.NETHERITE), List.of());
 }

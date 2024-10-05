@@ -2,6 +2,7 @@ package net.shade.terrapon.block;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -14,9 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shade.terrapon.Terrapon;
-import net.shade.terrapon.block.custom.EilifligroniumLampBlock;
-import net.shade.terrapon.block.custom.ModFlammableRotatePillarBlock;
-import net.shade.terrapon.block.custom.jetsetradio;
+import net.shade.terrapon.block.custom.*;
 import net.shade.terrapon.item.ModItems;
 
 import java.util.function.Supplier;
@@ -38,6 +37,9 @@ public class terraponblock {
     public static final RegistryObject<Block> EINVADRIL_BLOCK = registerBlock("einvadril_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BANJO).requiresCorrectToolForDrops()
                     .strength(6.0F, 10.0F).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> THORNECKITE_BLOCK = registerBlock("thorneckite_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BIT).requiresCorrectToolForDrops()
+                    .strength(7.0F, 10.0F).sound(SoundType.METAL)));
     public static final RegistryObject<Block> EILIFLIGRONIUM_BLOCK = registerBlock("eilifligronium_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.BANJO).requiresCorrectToolForDrops()
                     .strength(12.0F, 10.0F).sound(SoundType.METAL)));
@@ -46,10 +48,13 @@ public class terraponblock {
                     .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> HLIFINTITE_ORE = registerBlock("hlifintite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+                    .strength(7f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+    public static final RegistryObject<Block> THORNECKITE_ORE = registerBlock("thorneckite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(7f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> SEIDRILIUM_ORE = registerBlock("seidrilium_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
+                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(30,250)));
     public static final RegistryObject<Block> JETSETRADIO_BLOCK = registerBlock("jetsetradio_block",
             () -> new jetsetradio(BlockBehaviour.Properties.copy(IRON_BLOCK).noLootTable()));
     public static final RegistryObject<Block> STOKKR_WOOD = registerBlock("stokkr_wood",
@@ -84,7 +89,14 @@ public class terraponblock {
                     .lightLevel(state -> state.getValue(EilifligroniumLampBlock.CLICKED) ? 15 : 0)));
     public static final RegistryObject<Block> EILIFLIGRONIUM_WALL = registerBlock("eilifligronium_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(IRON_BLOCK).strength(7f).requiresCorrectToolForDrops()));
-
+    public static final RegistryObject<Block> VIONEA_CROP = BLOCKS.register("vionea_crop",
+            () -> new VioneaCrop(BlockBehaviour.Properties.copy(WHEAT).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> BLOM_BLAR = registerBlock("blom_blar",
+            () -> new FlowerBlock(() -> MobEffects.LEVITATION, 10, BlockBehaviour.Properties.copy(DANDELION)));
+    public static final RegistryObject<Block> POTTED_BLOM_BLAR = BLOCKS.register("potted_blom_blar",
+            () -> new FlowerPotBlock((() -> (FlowerPotBlock) Blocks.FLOWER_POT), BLOM_BLAR, BlockBehaviour.Properties.copy(DANDELION)));
+    public static final RegistryObject<Block> ALLOY_FUSION_STATION = registerBlock("alloy_fusion_station",
+            () -> new AlloyFusionStation(BlockBehaviour.Properties.copy(IRON_BLOCK).noOcclusion()));
 
 
 

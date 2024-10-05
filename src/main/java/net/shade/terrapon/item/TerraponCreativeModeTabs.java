@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.shade.terrapon.Terrapon;
 import net.shade.terrapon.block.terraponblock;
+import net.shade.terrapon.potion.TerraponPotions;
 
 public class TerraponCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -44,6 +45,19 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.EINVADRIL_CHESTPLATE.get());
                         output.accept(ModItems.EINVADRIL_LEGGINGS.get());
                         output.accept(ModItems.EINVADRIL_BOOTS.get());
+                        output.accept(ModItems.THORNECKITE_INGOT.get());
+                        output.accept(ModItems.RAW_THORNECKITE.get());
+                        output.accept(terraponblock.THORNECKITE_BLOCK.get());
+                        output.accept(terraponblock.THORNECKITE_ORE.get());
+                        output.accept(ModItems.THORNECKITE_SWORD.get());
+                        output.accept(ModItems.THORNECKITE_AXE.get());
+                        output.accept(ModItems.THORNECKITE_SHOVEL.get());
+                        output.accept(ModItems.THORNECKITE_PICKAXE.get());
+                        output.accept(ModItems.THORNECKITE_HOE.get());
+                        output.accept(ModItems.THORNECKITE_HELMET.get());
+                        output.accept(ModItems.THORNECKITE_CHESTPLATE.get());
+                        output.accept(ModItems.THORNECKITE_LEGGINGS.get());
+                        output.accept(ModItems.THORNECKITE_BOOTS.get());
                         output.accept(ModItems.HLIFINTITE_INGOT.get());
                         output.accept(ModItems.RAW_HLIFINTITE.get());
                         output.accept(terraponblock.HLIFINTITE_BLOCK.get());
@@ -57,6 +71,7 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.HLIFINTITE_CHESTPLATE.get());
                         output.accept(ModItems.HLIFINTITE_LEGGINGS.get());
                         output.accept(ModItems.HLIFINTITE_BOOTS.get());
+                        output.accept(terraponblock.ALLOY_FUSION_STATION.get());
                         output.accept(ModItems.EILIFLIGRONIUM_INGOT.get());
                         output.accept(terraponblock.EILIFLIGRONIUM_BLOCK.get());
                         output.accept(terraponblock.EILIFLIGRLAMP.get());
@@ -68,6 +83,7 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.EILIFLIGRONIUM_HOE.get());
                         output.accept(ModItems.EILIFLIGPAXEL.get());
                         output.accept(ModItems.EILIFLIGRONIUM_SLEDGE.get());
+                        output.accept(ModItems.EILIFLIGRONIUM_SHIELD.get());
                         output.accept(ModItems.EILIFLIGRONIUM_HELMET.get());
                         output.accept(ModItems.EILIFLIGRONIUM_CHESTPLATE.get());
                         output.accept(ModItems.EILIFLIGRONIUM_LEGGINGS.get());
@@ -75,6 +91,8 @@ public class TerraponCreativeModeTabs {
                         output.accept(ModItems.ORBOFSEIDRIL.get());
                         output.accept(ModItems.SEIDRILSCROLL.get());
                         output.accept(terraponblock.JETSETRADIO_BLOCK.get());
+                        output.accept(ModItems.VIONEASEEDS.get());
+                        output.accept(ModItems.VIONEA_BUSHEL.get());
                         output.accept(ModItems.GOBBREAD.get());
                         output.accept(ModItems.LOPT_FUEL.get());
                         output.accept(terraponblock.STOKKR_WOOD.get());
@@ -88,6 +106,11 @@ public class TerraponCreativeModeTabs {
                         output.accept(terraponblock.STOKKR_PRESSURE_PLATE.get());
                         output.accept(terraponblock.STOKKR_FENCE.get());
                         output.accept(terraponblock.STOKKR_FENCE_GATE.get());
+                        output.accept(terraponblock.BLOM_BLAR.get());
+                        output.accept(ModItems.BLOM_BLAR_DUST.get());
+                        output.accept(ModItems.DREAMSCAPE_RECORD.get());
+                        output.accept(ModItems.THUNDERKATANA.get());
+                        output.accept(ModItems.MANARIDIUM_GUN.get());
 
 
                     }).build());

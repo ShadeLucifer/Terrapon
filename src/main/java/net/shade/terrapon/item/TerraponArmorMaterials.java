@@ -16,10 +16,10 @@ import java.util.function.Supplier;
 public enum TerraponArmorMaterials implements ArmorMaterial {
 
     SEIDRILIUM("seidrilium", 84, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
-        map.put(ArmorItem.Type.BOOTS, 9);
-        map.put(ArmorItem.Type.LEGGINGS, 10);
-        map.put(ArmorItem.Type.CHESTPLATE, 12);
-        map.put(ArmorItem.Type.HELMET, 9);
+        map.put(ArmorItem.Type.BOOTS, 6);
+        map.put(ArmorItem.Type.LEGGINGS, 8);
+        map.put(ArmorItem.Type.CHESTPLATE, 10);
+        map.put(ArmorItem.Type.HELMET, 6);
     }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(ModItems.SEIDRILIUM_INGOT.get())),
     EINVADRIL("einvadril", 128, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 12);
@@ -27,13 +27,25 @@ public enum TerraponArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.CHESTPLATE, 16);
         map.put(ArmorItem.Type.HELMET, 12);
     }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.8F, () -> Ingredient.of(ModItems.EINVADRIL_INGOT.get())),
+    THORNECKITE("thorneckite", 1080, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 8);
+        map.put(ArmorItem.Type.LEGGINGS, 12);
+        map.put(ArmorItem.Type.CHESTPLATE, 16);
+        map.put(ArmorItem.Type.HELMET, 8);
+    }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.8F, () -> Ingredient.of(ModItems.THORNECKITE_INGOT.get())),
+    SOLLOGIUM("sollogium", 840, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 10);
+        map.put(ArmorItem.Type.LEGGINGS, 14);
+        map.put(ArmorItem.Type.CHESTPLATE, 18);
+        map.put(ArmorItem.Type.HELMET, 10);
+    }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.8F, () -> Ingredient.of(ModItems.SOLLOGIUM_INGOT.get())),
     HLIFINTITE("hlifintite", 4080, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 24);
         map.put(ArmorItem.Type.LEGGINGS, 26);
         map.put(ArmorItem.Type.CHESTPLATE, 30);
         map.put(ArmorItem.Type.HELMET, 24);
     }), 30, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.8F, () -> Ingredient.of(ModItems.HLIFINTITE_INGOT.get())),
-    EILIFLIGRONIUM("eilifligronium", 999999999, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+    EILIFLIGRONIUM("eilifligronium", -1 ,Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 42);
         map.put(ArmorItem.Type.LEGGINGS, 54);
         map.put(ArmorItem.Type.CHESTPLATE, 62);

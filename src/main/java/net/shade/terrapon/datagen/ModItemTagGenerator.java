@@ -22,7 +22,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.SEIDRILIUM_HELMET.get(), ModItems.SEIDRILIUM_CHESTPLATE.get(), ModItems.SEIDRILIUM_LEGGINGS.get(), ModItems.SEIDRILIUM_BOOTS.get());
+                .add(ModItems.SEIDRILIUM_HELMET.get(),
+                ModItems.SEIDRILIUM_CHESTPLATE.get(),
+                ModItems.SEIDRILIUM_LEGGINGS.get(),
+                ModItems.SEIDRILIUM_BOOTS.get(),
+                ModItems.EINVADRIL_HELMET.get(),
+                ModItems.EINVADRIL_CHESTPLATE.get(),
+                ModItems.EINVADRIL_LEGGINGS.get(),
+                ModItems.EINVADRIL_BOOTS.get(),
+                ModItems.HLIFINTITE_HELMET.get(),
+                ModItems.HLIFINTITE_CHESTPLATE.get(),
+                ModItems.HLIFINTITE_LEGGINGS.get(),
+                ModItems.HLIFINTITE_BOOTS.get(),
+                ModItems.EILIFLIGRONIUM_HELMET.get(),
+                ModItems.EILIFLIGRONIUM_CHESTPLATE.get(),
+                ModItems.EILIFLIGRONIUM_LEGGINGS.get(),
+                ModItems.EILIFLIGRONIUM_BOOTS.get());
     }
 
     @Override

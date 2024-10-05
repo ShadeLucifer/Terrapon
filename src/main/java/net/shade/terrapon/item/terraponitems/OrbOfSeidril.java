@@ -4,6 +4,7 @@ import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.shade.terrapon.item.ModItems;
+import net.shade.terrapon.sound.TerraponSounds;
 import net.shade.terrapon.util.InventoryUtil;
 import net.shade.terrapon.util.TerraponTags;
 import org.jetbrains.annotations.Nullable;
@@ -41,6 +43,9 @@ public class OrbOfSeidril extends Item {
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.SEIDRILSCROLL.get())) {
                         addInfoToSeidrilScroll(player, positionClicked.below(i), blockState.getBlock());
                     }
+
+                    pContext.getLevel().playSeededSound(null, player.getX(), player.getY(), player.getZ(),
+                            TerraponSounds.ORBOFSEIDRIL_FOUND_ORE.get(), SoundSource.BLOCKS, 0.90f, 1f, 0);
 
                     break;
                 }

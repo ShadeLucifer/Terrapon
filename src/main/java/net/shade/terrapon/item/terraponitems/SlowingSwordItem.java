@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
+import net.shade.terrapon.effect.TerraponEffects;
 
 public class SlowingSwordItem extends SwordItem {
     public SlowingSwordItem(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
@@ -17,7 +18,7 @@ public class SlowingSwordItem extends SwordItem {
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
-            livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 1), player);
+            livingEntity.addEffect(new MobEffectInstance(TerraponEffects.MANARIDIUMOVERFLOW_EFFECT.get(), 80, 1), player);
         }
         return super.onLeftClickEntity(stack, player, entity);
     }

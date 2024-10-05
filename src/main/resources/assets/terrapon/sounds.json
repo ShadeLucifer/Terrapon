@@ -1,0 +1,35 @@
+{
+ "orbofseidril_found_ore": {
+   "subtitle": "sounds.terrapon.orbofseidril_found_ore",
+   "sounds": [
+     "terrapon:orbofseidril_found_ore"
+   ]
+ },
+  "jetsetradio1": {
+    "subtitle": "sounds.terrapon.jetsetradio1",
+    "sounds": [
+      "terrapon:jetsetradio1"
+    ]
+  },
+  "jetsetradio2": {
+    "subtitle": "sounds.terrapon.jetsetradio2",
+    "sounds": [
+      "terrapon:jetsetradio2"
+    ]
+  },
+  "jetsetradio3": {
+    "subtitle": "sounds.terrapon.jetsetradio3",
+    "sounds": [
+      "terrapon:jetsetradio3"
+    ]
+  },
+  "jetsetradio4": {
+  "sounds": [
+    {
+      "name": "terrapon:jetsetradio4",
+      "stream": true
+    }
+  ]
+
+}
+}

@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.shade.terrapon.Terrapon;
+import net.shade.terrapon.sound.TerraponSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -30,10 +31,10 @@ public class jetsetradio extends Block {
                                  Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if(!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
             if(pPlayer.isCrouching()) {
-                pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_BANJO.get(), SoundSource.BLOCKS, 1f, 1f);
+                pLevel.playSound(null, pPos, TerraponSounds.JETSETRADIO2.get(), SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else {
-                pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_DIDGERIDOO.get(), SoundSource.BLOCKS, 1f, 1f);
+                pLevel.playSound(null, pPos, TerraponSounds.JETSETRADIO1.get(), SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.CONSUME;
             }
         }
@@ -43,7 +44,7 @@ public class jetsetradio extends Block {
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-      pLevel.playSound(pEntity, pPos, SoundEvents.NOTE_BLOCK_BASS.get(), SoundSource.BLOCKS, 1f, 1f);
+      pLevel.playSound(pEntity, pPos, TerraponSounds.JETSETRADIO3.get(), SoundSource.BLOCKS, 1f, 1f);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
 

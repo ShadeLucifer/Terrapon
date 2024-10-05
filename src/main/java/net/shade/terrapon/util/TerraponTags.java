@@ -13,6 +13,7 @@ public class TerraponTags {
         public static final TagKey<Block> ORBOFSEIDRIL_VALUABLES = tag("orbofseidril_valuables");
         public static final TagKey<Block> NEEDS_SEIDRILIUM_TOOL = tag("needs_seidrilium_tool");
         public static final TagKey<Block> NEEDS_EINVADRIL_TOOL = tag("needs_einvadril_tool");
+        public static final TagKey<Block> NEEDS_THORNECKITE_TOOL = tag("needs_thorneckite_tool");
         public static final TagKey<Block> NEEDS_HLIFINTITE_TOOL = tag("needs_hlifintite_tool");
         public static final TagKey<Block> NEEDS_EILIFLIGRONIUM_TOOL = tag("needs_eilifligronium_tool");
         public static final TagKey<Block> EILIFLIGPAXEL_MINEABLE = tag("mineable/eilifligpaxel");

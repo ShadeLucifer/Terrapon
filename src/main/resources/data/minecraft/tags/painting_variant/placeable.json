@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "terrapon:deez_nuts",
+      "required": false
+    },
+    {
+      "id": "terrapon:holy_cow",
+      "required": false
+    },
+    {
+      "id": "terrapon:pp",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "terrapon:thorneckite_block"
+    }
+  ],
+  "result": {
+    "item": "terrapon:thorneckite_ingot",
+    "count": 9
+  }
+}
